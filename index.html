@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tezkor Delivery - Yetkazib berish xizmati</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigatsiya -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-truck-fast"></i> Tezkor<span>Delivery</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link active" data-target="home-page">Asosiy</a></li>
+                    <li><a href="#" class="nav-link" data-target="how-page">Qanday ishlaydi?</a></li>
+                    <li><a href="#" class="nav-link" data-target="tariffs-page">Tariflar</a></li>
+                </ul>
+            </nav>
+            <button class="btn-primary mobile-hidden" onclick="document.querySelector('.nav-links li:first-child a').click()">Buyurtma berish</button>
+        </div>
+    </header>
+
+    <!-- SPA Sahifalar -->
+    <main class="container">
+        
+        <!-- 1-Sahifa: Asosiy va Buyurtma berish -->
+        <section id="home-page" class="page active">
+            <div class="hero">
+                <div class="hero-text">
+                    <h1>Sizning posilkangizni <span>chaqmoq tezligida</span> yetkazamiz</h1>
+                    <p>Hujjatlardan tortib katta hajmdagi yuklargacha. Ishonchli, tez va qulay xizmatimizdan foydalaning.</p>
+                    
+                    <div class="order-form-card">
+                        <h3>Buyurtma qoldirish</h3>
+                        <form id="orderForm">
+                            <div class="form-group">
+                                <input type="text" placeholder="Ismingiz" required>
+                                <input type="tel" placeholder="Telefon raqamingiz" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Qayerdan olib ketiladi?" required>
+                                <input type="text" placeholder="Qayerga yetkaziladi?" required>
+                            </div>
+                            <button type="submit" class="btn-primary w-100">Kuryerni chaqirish</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2760/2760147.png" alt="Delivery illustration" class="floating-anim">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2-Sahifa: Qanday ishlashi -->
+        <section id="how-page" class="page">
+            <div class="section-title">
+                <h2>Tizim qanday ishlaydi?</h2>
+                <p>Hammasi juda oddiy. 3 qadamda posilkangiz manzilga yetib boradi.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-icon"><i class="fa-solid fa-file-signature"></i></div>
+                    <h3>1. Buyurtma berasiz</h3>
+                    <p>Sayt orqali formani to'ldirasiz va bizning operatorimiz siz bilan bog'lanadi.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon"><i class="fa-solid fa-box-open"></i></div>
+                    <h3>2. Kuryer yukni oladi</h3>
+                    <p>Kuryerimiz siz ko'rsatgan manzilga borib, posilkani xavfsiz qabul qilib oladi.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <h3>3. Manzilga yetkazamiz</h3>
+                    <p>Belgilangan tarifga muvofiq, posilka o'z vaqtida va beziyon yetkazib beriladi.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3-Sahifa: Tariflar -->
+        <section id="tariffs-page" class="page">
+            <div class="section-title">
+                <h2>Bizning Tariflar</h2>
+                <p>O'zingizga mos keladigan qulay tarifni tanlang</p>
+            </div>
+            <div class="tariffs-grid">
+                <div class="tariff-card">
+                    <h4>Standart</h4>
+                    <div class="price">25,000 <span>so'm/dan</span></div>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> 24 soat ichida yetkazish</li>
+                        <li><i class="fa-solid fa-check"></i> 5 kg gacha yuklar</li>
+                        <li><i class="fa-solid fa-check"></i> SMS xabarnoma</li>
+                    </ul>
+                    <button class="btn-outline w-100 select-tariff">Tanlash</button>
+                </div>
+                <div class="tariff-card popular">
+                    <div class="badge">Eng mashhur</div>
+                    <h4>Ekspress</h4>
+                    <div class="price">45,000 <span>so'm/dan</span></div>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> 3 soat ichida yetkazish</li>
+                        <li><i class="fa-solid fa-check"></i> 15 kg gacha yuklar</li>
+                        <li><i class="fa-solid fa-check"></i> Kuzatish imkoniyati</li>
+                        <li><i class="fa-solid fa-check"></i> Eshikkacha yetkazish</li>
+                    </ul>
+                    <button class="btn-primary w-100 select-tariff">Tanlash</button>
+                </div>
+                <div class="tariff-card">
+                    <h4>Katta hajmdagi</h4>
+                    <div class="price">80,000 <span>so'm/dan</span></div>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Katta mashinada yetkazish</li>
+                        <li><i class="fa-solid fa-check"></i> 100 kg gacha yuklar</li>
+                        <li><i class="fa-solid fa-check"></i> Yuklovchi xodimlar yordami</li>
+                    </ul>
+                    <button class="btn-outline w-100 select-tariff">Tanlash</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
